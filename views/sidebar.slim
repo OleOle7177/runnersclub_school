@@ -6,18 +6,13 @@
       | Toggle navigation
     i.fa.fa-bars
 
-ul.nav.navbar-nav.navbar-items.collapse
-  / li
-  /   = link_to 'Team', "#"
-  / li
-  /   = link_to 'Training', '#'
-/ 
-/ 
-/ 
-/ ul.nav.nav-stacked.side-nav role='navigation'
-/   li.active
-/     = link_to 'Index', '#'
-/   li
-/      = link_to 'Team', '#'
-/   li
-/     = link_to 'Training', '#'
+  ul.nav.navbar-nav.navbar-items.collapse
+    li: a.team href='#' Team
+    li: a.training href='#' Training
+    li: a.price href='#' Price
+
+ul.nav.nav-stacked.side-nav role='navigation'
+  li: a.home href='#' Index
+  li: a.team href='#' Team
+  li: a.training href='#' Training
+  li: a.price href='#' Price

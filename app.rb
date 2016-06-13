@@ -5,8 +5,10 @@
 class App < Sinatra::Base
   configure do
     set :assets, (Sprockets::Environment.new { |env|
-      env.append_path(settings.root + 'assets/stylesheets')
-      env.append_path(settings.root + 'assets/javascripts')
+      env.append_path(settings.root + '/assets/stylesheets')
+      env.append_path(settings.root + '/assets/javascripts')
+
+      # env.append_path(settings.root + '/assets/images')
 
       #compress in production
       if ENV['RACK_ENV'] == 'production'
@@ -24,6 +26,7 @@ class App < Sinatra::Base
   get '/assets/app.css' do
     content_type('text/css')
     settings.assets['app.css']
+    # binding.pry
   end
 
   get '/' do

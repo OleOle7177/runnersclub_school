@@ -7,5 +7,6 @@ gem 'slim'
 gem 'coffee-script'
 gem 'sass'
 
+gem 'pry'
 gem 'sprockets'
 gem 'yui-compressor'
