@@ -1,15 +1,16 @@
+html, body
+  max-width: 100%
+  overflow-x: hidden
+
+
 .content
   position: absolute
   height: 100%
 
-  #home
-    height: 100%
-
   #team
-    padding: 10px
-    // height: 100%
+    padding-left: 10px
     .line
-      margin-left: 5px
+      margin-left: 6px
     .blog-link
       font-size: 14px
       color: #777
@@ -20,22 +21,39 @@
   #training
     p
       padding: 10px
-    height: 100%
 
   #price
+    p
+      padding: 10px
     height: 100%
 
+#home
+  height: 100%
+  z-index: 2
 
 @media only screen and (max-width: 767px)
-  .content
-    padding-top: 56px
-    margin-left: 0px
+  #home
+    height: 100%
     video
       display: none
 
+  .section
+    padding-top: 56px
+
 @media(min-width: 768px)
+  .section
+    padding-top: 0px
   .content
-    margin-left: 225px
+    padding-left: 225px
     video
       height: 100%
       width: 100%
+
+    #training
+      height: 100%
+    #price
+      height: 100%
+
+@-moz-document url-prefix()
+  fieldset
+    display: table-cell

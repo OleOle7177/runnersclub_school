@@ -1,0 +1,16 @@
+/* Side Navigation */
+@media only screen and (max-width: 767px) {
+  .sidebar-background {
+    display: none;
+  }
+}
+
+@media(min-width: 768px) {
+  .sidebar-background {
+    position: fixed;
+    width: 225px;
+    background-color: black;
+    z-index: -1;
+    height: 100%;
+  }
+}
