@@ -40,6 +40,7 @@ window.onload = function() {
     imgLarge.src = placeholder.dataset.large;
     imgLarge.onload = function () {
       imgLarge.classList.add('loaded');
+      imgLarge.classList.add('img-responsive');    
     }
     placeholder.appendChild(imgLarge);
   }
@@ -53,7 +54,6 @@ window.onload = function() {
     videoLarge.loop = true;
 
     videoLarge.onloadeddata = function () {
-      console.log("LOADED");
       videoLarge.classList.add('loaded');
     }
     video.appendChild(videoLarge);

@@ -46,6 +46,7 @@ html, body
 .content
   position: absolute
   height: 100%
+  width: 100%
 
   #team
     padding-left: 10px
@@ -77,12 +78,49 @@ html, body
     video
       display: none
 
+    #contacts-sm
+      position: absolute
+      z-index: 1
+      top: 5px
+      width: 100%
+
+      li
+        padding: 3px
+        a
+          color: white
+          padding: 3px
+      img
+        opacity: 1
+        display: block
+        margin: auto
+        width: 50%
+        position: relative
+        top: 0
+
   .section
     padding-top: 56px
+
+    .placeholder.image
+      margin-left: -10px
+
+  #home
+    .placeholder.video
+      display: none
+
+@media(max-width: 991px)
+  .section
+    .placeholder.image
+      margin-left: -10px
+
 
 @media(min-width: 768px)
   .section
     padding-top: 0px
+
+  #home
+    .placeholder.image
+      display: none
+
   .content
     padding-left: 225px
     video
@@ -93,6 +131,7 @@ html, body
       height: 100%
     #price
       height: 100%
+
 
 @-moz-document url-prefix()
   fieldset
