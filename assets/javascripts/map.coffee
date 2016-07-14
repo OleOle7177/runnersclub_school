@@ -1,5 +1,4 @@
 init = ->
-  console.log 'MAP SCRIPT'
   myMap = new (ymaps.Map)('map',
     center: [
       55.066408
