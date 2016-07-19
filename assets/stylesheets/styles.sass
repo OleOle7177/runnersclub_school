@@ -1,6 +1,7 @@
 html, body
   max-width: 100%
   overflow-x: hidden
+  position: relative
 
   i.white
     color: white
@@ -43,14 +44,16 @@ html, body
     /* this is needed so Safari keeps sharp edges */
     transform: scale(1)
 
+
 .content
   height: 100%
   width: 100%
 
   #team
-    padding-left: 10px
+    .row p, h2
+      padding-left: 10px
     .line
-      margin-left: 6px
+      margin-left: 16px
     .blog-link
       font-size: 14px
       color: #777
@@ -65,7 +68,7 @@ html, body
   #price
     p
       padding: 10px
-    height: 100%
+    min-height: 97vh
 
 #home
   height: 100%
@@ -74,6 +77,7 @@ html, body
 @media only screen and (max-width: 767px)
   #home
     height: 100vh
+    min-height: 500px
     video
       display: none
 
@@ -119,11 +123,18 @@ html, body
     .placeholder.image
       margin-left: -10px
 
+  #footer
+    position: absolute
+    margin-top: 5px
+    left: calc(50% - 70px)
 
-@media(max-width: 991px)
-  // .section
-  //   .placeholder.image
-  //     margin-left: -10px
+@media(min-width: 992px)
+  #team
+    .placeholder.image
+      margin-left: 10px
+
+    .row h2
+      margin-top: 0px !important
 
 
 @media(min-width: 768px)
@@ -141,9 +152,12 @@ html, body
       width: 100%
 
     #training
-      height: 100%
-    #price
-      height: 100%
+      height: 100vh
+
+  #footer
+    position: absolute
+    bottom: 5px
+    left: calc(50% + 50px)
 
 
 @-moz-document url-prefix()

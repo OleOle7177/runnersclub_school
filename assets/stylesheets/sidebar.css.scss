@@ -4,6 +4,10 @@
     display: none;
   }
 
+  .navbar-inverse .navbar-brand {
+    color: white !important;
+  }
+
   .navbar-items {
     width: 100%;
     position: fixed;

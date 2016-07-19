@@ -5,14 +5,14 @@ $(document).ready ->
 
   $('#scroll').on 'activate.bs.scrollspy', (event) ->
     sectionName = $('ul.nav.navbar-nav .active > a').attr('href')
-    $('ul.nav .active').removeClass('active')
+    $('ul.side-nav .active').removeClass('active')
     $('.side-nav a[href="' + sectionName + '"]').parent('li').addClass('active')
 
 
   # Add smooth scrolling on all links inside the navbar
-  $('ul.nav > li').on 'click', (event) ->
-    @hash = $(this).children('a').attr('href')
-
+  $('ul.nav > li, a.navbar-brand').on 'click', (event) ->
+    $('.navigation ul.nav').collapse('hide')
+    @hash = $(this).children('a').attr('href') || 'home'
     if @hash != ''
       # Prevent default anchor click behavior
       event.preventDefault()
