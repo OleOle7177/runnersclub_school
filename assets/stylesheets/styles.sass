@@ -68,11 +68,13 @@ html, body
   #price
     p
       padding: 10px
-    min-height: 97vh
+    min-height: calc(100vh - 22px)
+    padding-bottom: 5px
 
 #home
   height: 100%
   z-index: 2
+
 
 @media only screen and (max-width: 767px)
   #home
@@ -125,7 +127,7 @@ html, body
 
   #footer
     position: absolute
-    margin-top: 5px
+    bottom: 2px
     left: calc(50% - 70px)
 
 @media(min-width: 992px)
@@ -153,11 +155,6 @@ html, body
 
     #training
       height: 100vh
-
-  #footer
-    position: absolute
-    bottom: 5px
-    left: calc(50% + 50px)
 
 
 @-moz-document url-prefix()
