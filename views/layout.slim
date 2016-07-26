@@ -24,5 +24,5 @@ html
     == slim :sidebar
     == yield
 
-    script src='/assets/app.js'
-    link href='/assets/app.css' rel='stylesheet' /
+    == javascript_tag('app.js')
+    == stylesheet_tag('app.css')

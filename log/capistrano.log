@@ -394,3 +394,179 @@ Make sure that `gem install net-ssh -v '3.1.1'` succeeds before bundling.
  DEBUG [21eee734] 	Gem::InstallError: net-ssh requires Ruby version >= 2.0.
  DEBUG [21eee734] 	An error occurred while installing net-ssh (3.1.1), and Bundler cannot continue.
 Make sure that `gem install net-ssh -v '3.1.1'` succeeds before bundling.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-07-26 14:49:40 +0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [34832434] Running [ -d ~/.rvm ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [34832434] Command: [ -d ~/.rvm ]
+ DEBUG [34832434] Finished in 1.318 seconds with exit status 1 (failed).
+ DEBUG [e546d261] Running [ -d /usr/local/rvm ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [e546d261] Command: [ -d /usr/local/rvm ]
+ DEBUG [e546d261] Finished in 0.183 seconds with exit status 0 (successful).
+ DEBUG [4c68611b] Running /usr/local/rvm/bin/rvm version as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [4c68611b] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [4c68611b] 	rvm 1.26.11 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [4c68611b] Finished in 0.573 seconds with exit status 0 (successful).
+ DEBUG [3fd21246] Running /usr/local/rvm/bin/rvm current as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [3fd21246] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [3fd21246] 	system
+ DEBUG [3fd21246] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [59fd5f9b] Running /usr/local/rvm/bin/rvm default do ruby --version as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [59fd5f9b] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [59fd5f9b] 	ruby 1.9.3p484 (2013-11-22) [x86_64-linux]
+ DEBUG [59fd5f9b] Finished in 0.775 seconds with exit status 0 (successful).
+  INFO [edfb85a4] Running /usr/bin/env mkdir -p /tmp/camp/ as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [edfb85a4] Command: /usr/bin/env mkdir -p /tmp/camp/
+  INFO [edfb85a4] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/camp/git-ssh.sh 0.0%
+  INFO Uploading /tmp/camp/git-ssh.sh 100.0%
+  INFO [bf6827f3] Running /usr/bin/env chmod +rx /tmp/camp/git-ssh.sh as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [bf6827f3] Command: /usr/bin/env chmod +rx /tmp/camp/git-ssh.sh
+  INFO [bf6827f3] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [19a1d283] Running /usr/bin/env git ls-remote --heads git@github.com:OleOle7177/runnersclub_school.git as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [19a1d283] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:OleOle7177/runnersclub_school.git )
+ DEBUG [19a1d283] 	399f493bf3bc94fb2a00889ca85e9e61ae075f3b	refs/heads/master
+  INFO [19a1d283] Finished in 2.554 seconds with exit status 0 (successful).
+  INFO [70770769] Running /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/shared /home/hosting_oleole7177/projects/camp/releases as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [70770769] Command: /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/shared /home/hosting_oleole7177/projects/camp/releases
+  INFO [70770769] Finished in 0.183 seconds with exit status 0 (successful).
+ DEBUG [6727bc55] Running [ -f /home/hosting_oleole7177/projects/camp/current/REVISION ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [6727bc55] Command: [ -f /home/hosting_oleole7177/projects/camp/current/REVISION ]
+ DEBUG [6727bc55] Finished in 0.186 seconds with exit status 1 (failed).
+ DEBUG [5744e2fd] Running [ -f /home/hosting_oleole7177/projects/camp/repo/HEAD ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [5744e2fd] Command: [ -f /home/hosting_oleole7177/projects/camp/repo/HEAD ]
+ DEBUG [5744e2fd] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/hosting_oleole7177/projects/camp/repo
+ DEBUG [f705e3e5] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [f705e3e5] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [f705e3e5] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [f371aef9] Running /usr/bin/env git remote update --prune as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [f371aef9] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f371aef9] 	Fetching origin
+ DEBUG [f371aef9] 	From github.com:OleOle7177/runnersclub_school
+   7aaaf92..399f493  master     -> master
+  INFO [f371aef9] Finished in 2.623 seconds with exit status 0 (successful).
+ DEBUG [87326f55] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [87326f55] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [87326f55] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [614da14b] Running /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/releases/20160726084947 as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [614da14b] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/releases/20160726084947 )
+  INFO [614da14b] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [34b28556] Running /usr/bin/env git archive master | tar -x -f - -C /home/hosting_oleole7177/projects/camp/releases/20160726084947 as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [34b28556] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/hosting_oleole7177/projects/camp/releases/20160726084947 )
+  INFO [34b28556] Finished in 0.206 seconds with exit status 0 (successful).
+ DEBUG [bc018415] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [bc018415] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [bc018415] Finished in 0.185 seconds with exit status 0 (successful).
+ DEBUG [a41227fb] Running /usr/bin/env git rev-list --max-count=1 master as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [a41227fb] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a41227fb] 	399f493bf3bc94fb2a00889ca85e9e61ae075f3b
+ DEBUG [a41227fb] Finished in 0.201 seconds with exit status 0 (successful).
+ DEBUG [38707411] Running if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726084947; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726084947'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [38707411] Command: if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726084947; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726084947'" 1>&2; false; fi
+ DEBUG [38707411] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [0bfb6b14] Running /usr/bin/env echo "399f493bf3bc94fb2a00889ca85e9e61ae075f3b" >> REVISION as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [0bfb6b14] Command: cd /home/hosting_oleole7177/projects/camp/releases/20160726084947 && /usr/bin/env echo "399f493bf3bc94fb2a00889ca85e9e61ae075f3b" >> REVISION
+  INFO [0bfb6b14] Finished in 0.493 seconds with exit status 0 (successful).
+ DEBUG [7ed741a9] Running if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726084947; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726084947'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [7ed741a9] Command: if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726084947; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726084947'" 1>&2; false; fi
+ DEBUG [7ed741a9] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [e43b5f70] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/hosting_oleole7177/projects/camp/shared/bundle --without [:development, :test] --deployment --quiet as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [e43b5f70] Command: cd /home/hosting_oleole7177/projects/camp/releases/20160726084947 && /usr/local/rvm/bin/rvm default do bundle install --path /home/hosting_oleole7177/projects/camp/shared/bundle --without [:development, :test] --deployment --quiet
+ DEBUG [e43b5f70] 	Gem::InstallError: net-ssh requires Ruby version >= 2.0.
+ DEBUG [e43b5f70] 	An error occurred while installing net-ssh (3.1.1), and Bundler cannot continue.
+Make sure that `gem install net-ssh -v '3.1.1'` succeeds before bundling.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-07-26 14:50:25 +0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2f6b2907] Running [ -d ~/.rvm ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [2f6b2907] Command: [ -d ~/.rvm ]
+ DEBUG [2f6b2907] Finished in 1.242 seconds with exit status 1 (failed).
+ DEBUG [b9bd4d58] Running [ -d /usr/local/rvm ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [b9bd4d58] Command: [ -d /usr/local/rvm ]
+ DEBUG [b9bd4d58] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [ab7cd8b4] Running /usr/local/rvm/bin/rvm version as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [ab7cd8b4] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [ab7cd8b4] 	rvm 1.26.11 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [ab7cd8b4] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [e5f8b8f4] Running /usr/local/rvm/bin/rvm current as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [e5f8b8f4] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [e5f8b8f4] 	system
+ DEBUG [e5f8b8f4] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [43570413] Running /usr/local/rvm/bin/rvm 2.2.2 do ruby --version as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [43570413] Command: /usr/local/rvm/bin/rvm 2.2.2 do ruby --version
+ DEBUG [43570413] 	ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
+ DEBUG [43570413] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [bb398a6f] Running /usr/bin/env mkdir -p /tmp/camp/ as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [bb398a6f] Command: /usr/bin/env mkdir -p /tmp/camp/
+  INFO [bb398a6f] Finished in 0.183 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/camp/git-ssh.sh 0.0%
+  INFO Uploading /tmp/camp/git-ssh.sh 100.0%
+  INFO [0444bb8b] Running /usr/bin/env chmod +rx /tmp/camp/git-ssh.sh as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [0444bb8b] Command: /usr/bin/env chmod +rx /tmp/camp/git-ssh.sh
+  INFO [0444bb8b] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [faf429e2] Running /usr/bin/env git ls-remote --heads git@github.com:OleOle7177/runnersclub_school.git as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [faf429e2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:OleOle7177/runnersclub_school.git )
+ DEBUG [faf429e2] 	399f493bf3bc94fb2a00889ca85e9e61ae075f3b	refs/heads/master
+  INFO [faf429e2] Finished in 2.278 seconds with exit status 0 (successful).
+  INFO [dd3283d9] Running /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/shared /home/hosting_oleole7177/projects/camp/releases as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [dd3283d9] Command: /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/shared /home/hosting_oleole7177/projects/camp/releases
+  INFO [dd3283d9] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [e96a522a] Running [ -f /home/hosting_oleole7177/projects/camp/current/REVISION ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [e96a522a] Command: [ -f /home/hosting_oleole7177/projects/camp/current/REVISION ]
+ DEBUG [e96a522a] Finished in 0.184 seconds with exit status 1 (failed).
+ DEBUG [2cfa3000] Running [ -f /home/hosting_oleole7177/projects/camp/repo/HEAD ] as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [2cfa3000] Command: [ -f /home/hosting_oleole7177/projects/camp/repo/HEAD ]
+ DEBUG [2cfa3000] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/hosting_oleole7177/projects/camp/repo
+ DEBUG [661f0dcc] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [661f0dcc] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [661f0dcc] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [57f91aeb] Running /usr/bin/env git remote update --prune as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [57f91aeb] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [57f91aeb] 	Fetching origin
+  INFO [57f91aeb] Finished in 2.469 seconds with exit status 0 (successful).
+ DEBUG [0785a172] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [0785a172] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [0785a172] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [211e3b56] Running /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/releases/20160726085032 as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [211e3b56] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env mkdir -p /home/hosting_oleole7177/projects/camp/releases/20160726085032 )
+  INFO [211e3b56] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [3da0ef1f] Running /usr/bin/env git archive master | tar -x -f - -C /home/hosting_oleole7177/projects/camp/releases/20160726085032 as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [3da0ef1f] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/hosting_oleole7177/projects/camp/releases/20160726085032 )
+  INFO [3da0ef1f] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [b8f5c6d8] Running if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [b8f5c6d8] Command: if test ! -d /home/hosting_oleole7177/projects/camp/repo; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/repo'" 1>&2; false; fi
+ DEBUG [b8f5c6d8] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [37f8484d] Running /usr/bin/env git rev-list --max-count=1 master as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [37f8484d] Command: cd /home/hosting_oleole7177/projects/camp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/camp/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [37f8484d] 	399f493bf3bc94fb2a00889ca85e9e61ae075f3b
+ DEBUG [37f8484d] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [5181e901] Running if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726085032; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726085032'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [5181e901] Command: if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726085032; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726085032'" 1>&2; false; fi
+ DEBUG [5181e901] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [5cada7bf] Running /usr/bin/env echo "399f493bf3bc94fb2a00889ca85e9e61ae075f3b" >> REVISION as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [5cada7bf] Command: cd /home/hosting_oleole7177/projects/camp/releases/20160726085032 && /usr/bin/env echo "399f493bf3bc94fb2a00889ca85e9e61ae075f3b" >> REVISION
+  INFO [5cada7bf] Finished in 0.189 seconds with exit status 0 (successful).
+ DEBUG [ac8a3938] Running if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726085032; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726085032'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [ac8a3938] Command: if test ! -d /home/hosting_oleole7177/projects/camp/releases/20160726085032; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases/20160726085032'" 1>&2; false; fi
+ DEBUG [ac8a3938] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [36cc1856] Running /usr/local/rvm/bin/rvm 2.2.2 do bundle install --path /home/hosting_oleole7177/projects/camp/shared/bundle --without [:development, :test] --deployment --quiet as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [36cc1856] Command: cd /home/hosting_oleole7177/projects/camp/releases/20160726085032 && /usr/local/rvm/bin/rvm 2.2.2 do bundle install --path /home/hosting_oleole7177/projects/camp/shared/bundle --without [:development, :test] --deployment --quiet
+  INFO [36cc1856] Finished in 15.975 seconds with exit status 0 (successful).
+  INFO [782d5183] Running /usr/bin/env ln -s /home/hosting_oleole7177/projects/camp/releases/20160726085032 /home/hosting_oleole7177/projects/camp/releases/current as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [782d5183] Command: /usr/bin/env ln -s /home/hosting_oleole7177/projects/camp/releases/20160726085032 /home/hosting_oleole7177/projects/camp/releases/current
+  INFO [782d5183] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [f748674c] Running /usr/bin/env mv /home/hosting_oleole7177/projects/camp/releases/current /home/hosting_oleole7177/projects/camp as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [f748674c] Command: /usr/bin/env mv /home/hosting_oleole7177/projects/camp/releases/current /home/hosting_oleole7177/projects/camp
+  INFO [f748674c] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [7ddee16c] Running /usr/bin/env ls -xtr /home/hosting_oleole7177/projects/camp/releases as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [7ddee16c] Command: /usr/bin/env ls -xtr /home/hosting_oleole7177/projects/camp/releases
+ DEBUG [7ddee16c] 	20160726083938	20160726084947	20160726085032
+ DEBUG [7ddee16c] Finished in 0.189 seconds with exit status 0 (successful).
+ DEBUG [dad937a0] Running if test ! -d /home/hosting_oleole7177/projects/camp/releases; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases'" 1>&2; false; fi as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [dad937a0] Command: if test ! -d /home/hosting_oleole7177/projects/camp/releases; then echo "Directory does not exist '/home/hosting_oleole7177/projects/camp/releases'" 1>&2; false; fi
+ DEBUG [dad937a0] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [c6b4744e] Running /usr/bin/env echo "Branch master (at 399f493bf3bc94fb2a00889ca85e9e61ae075f3b) deployed as release 20160726085032 by oleg" >> /home/hosting_oleole7177/projects/camp/revisions.log as hosting_oleole7177@phosphorus.locum.ru
+ DEBUG [c6b4744e] Command: cd /home/hosting_oleole7177/projects/camp/releases && /usr/bin/env echo "Branch master (at 399f493bf3bc94fb2a00889ca85e9e61ae075f3b) deployed as release 20160726085032 by oleg" >> /home/hosting_oleole7177/projects/camp/revisions.log
+  INFO [c6b4744e] Finished in 0.185 seconds with exit status 0 (successful).

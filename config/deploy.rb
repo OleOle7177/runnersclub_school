@@ -18,30 +18,24 @@ set :ssh_options, { :forward_agent => true }
 # Не включать в поставку разработческие инструменты и пакеты тестирования.
 set :bundle_without,  [:development, :test]
 
-p '*' * 10
 set :deployer,        'hosting_oleole7177'
 set :use_sudo,        false
 set :deploy_to,       "/home/hosting_oleole7177/projects/camp"
 set :unicorn_conf,    "/etc/unicorn/camp.oleole7177.rb"
 set :unicorn_pid,     "/var/run/unicorn/hosting_oleole7177/camp.oleole7177.pid"
-p '*' * 10
+set :rvm_ruby_version, '2.2.2'
 
-p "#{fetch(:shared_path)}"
 # set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
-p '*' * 10
 role :web,             "phosphorus.locum.ru"
 role :app,             "phosphorus.locum.ru"
 role :db,              "phosphorus.locum.ru", :primary => true
 
-p '*' * 10
 
 # Следующие строки необходимы, т.к. ваш проект использует rvm.
 set :rvm_ruby_string, "2.2.2"
 set :rake,            "rvm use #{fetch(:rvm_ruby_string)} do bundle exec rake"
 set :bundle_cmd,      "rvm use #{fetch(:rvm_ruby_string)} do bundle"
 set :rack_env, :production
-
-p '*' * 10
 
 # Настройка системы контроля версий и репозитария,
 # по умолчанию - git, если используется иная система версий,
@@ -55,7 +49,7 @@ set :scm,             :git
 #     set :current_release, latest_release
 # end
 
-set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn -Dc #{fetch(:unicorn_conf)})"
+set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use 2.2.2 do bundle exec unicorn -Dc /etc/unicorn/camp.oleole7177.rb"
 # set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn -c #{current_path}/config/unicorn.rb -D -E #{fetch(:rack_env)};
 # Default value for keep_releases is 5
 set :keep_releases, 5

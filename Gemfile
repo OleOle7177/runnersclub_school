@@ -10,6 +10,7 @@ gem 'sass'
 gem 'pry'
 gem 'sprockets'
 gem 'yui-compressor'
+gem 'sinatra-asset-pipeline'
 
 gem 'capistrano'
 gem 'unicorn'

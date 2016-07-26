@@ -1,0 +1,194 @@
+/* Side Navigation */
+@media only screen and (max-width: 767px) {
+  .side-nav {
+    display: none; }
+
+  .navbar-inverse .navbar-brand {
+    color: white !important; }
+
+  .navbar-items {
+    width: 100%;
+    position: fixed;
+    margin-top: 57px;
+    background-color: black; }
+    .navbar-items li.home {
+      display: none; }
+
+  .navbar-nav {
+    margin-left: 0px; }
+
+  .navbar-inverse .navbar-toggle {
+    color: white;
+    border-color: white; } }
+@media (min-width: 768px) {
+  .side-nav {
+    position: fixed;
+    width: 225px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    height: 100%; }
+    .side-nav .contacts {
+      position: fixed;
+      bottom: 5px; }
+      .side-nav .contacts li {
+        padding: 10px 15px; }
+      .side-nav .contacts li.phone {
+        color: white; }
+      .side-nav .contacts li.social-links a {
+        padding-right: 10px; }
+    .side-nav li img.logo {
+      width: 100%; }
+    .side-nav li a {
+      color: white; }
+      .side-nav li a:hover {
+        background-color: transparent; }
+      .side-nav li a:focus {
+        background-color: transparent; }
+    .side-nav li a.home:hover {
+      background-color: transparent; }
+    .side-nav li.active a {
+      color: #333;
+      background-color: #eee; }
+    .side-nav li.active a.home {
+      background-color: transparent; }
+
+  .navigation {
+    display: none; } }
+/* Side Navigation */
+@media only screen and (max-width: 767px) {
+  .sidebar-background {
+    display: none; } }
+@media (min-width: 768px) {
+  .sidebar-background {
+    position: fixed;
+    width: 225px;
+    background-color: black;
+    z-index: -1;
+    height: 100%; } }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative; }
+  html i.white, body i.white {
+    color: white;
+    font-size: 25px; }
+  html .placeholder, body .placeholder {
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; }
+  html .placeholder img, body .placeholder img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s linear; }
+  html .placeholder video, body .placeholder video {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 1080px;
+    transition: opacity 1s linear; }
+  html .placeholder img.loaded, body .placeholder img.loaded {
+    opacity: 1; }
+  html .placeholder video.loaded, body .placeholder video.loaded {
+    opacity: 1; }
+  html .img-small, body .img-small {
+    filter: blur(50px);
+    /* this is needed so Safari keeps sharp edges */
+    transform: scale(1); }
+
+.content {
+  height: 100%;
+  width: 100%; }
+  .content #team .row p, .content #team h2 {
+    padding-left: 10px; }
+  .content #team .line {
+    margin-left: 16px; }
+  .content #team .blog-link {
+    font-size: 14px;
+    color: #777;
+    text-decoration: underline;
+    padding-left: 5px; }
+  .content #training p {
+    padding: 10px; }
+  .content #price {
+    min-height: calc(100vh - 22px);
+    padding-bottom: 5px; }
+    .content #price p {
+      padding: 10px; }
+
+#home {
+  height: 100%;
+  z-index: 2; }
+
+@media only screen and (max-width: 767px) {
+  #home {
+    height: 100vh;
+    min-height: 500px; }
+    #home video {
+      display: none; }
+    #home .placeholder.image {
+      height: 100%;
+      overflow: hidden; }
+    #home .placeholder.image > img {
+      width: auto;
+      height: 900px;
+      max-width: none !important; }
+    #home .placeholder.video {
+      display: none; }
+    #home #contacts-sm {
+      position: absolute;
+      z-index: 1;
+      width: 90%;
+      left: 6.5%;
+      top: 20%;
+      font-size: 14pt; }
+      #home #contacts-sm li {
+        padding: 3px; }
+        #home #contacts-sm li a {
+          color: white;
+          padding: 5px; }
+      #home #contacts-sm img {
+        opacity: 1;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 0;
+        max-height: 200px;
+        width: 80%; }
+
+  .section {
+    padding-top: 56px; }
+    .section .placeholder.image {
+      margin-left: -10px; }
+
+  #footer {
+    position: absolute;
+    bottom: 2px;
+    left: calc(50% - 70px); } }
+@media(min-width: 992px) {
+  #team .placeholder.image {
+    margin-left: 10px; }
+  #team .row h2 {
+    margin-top: 0px !important; } }
+@media(min-width: 768px) {
+  .section {
+    padding-top: 0px; }
+
+  #home .placeholder.image {
+    display: none; }
+
+  .content {
+    padding-left: 225px; }
+    .content video {
+      height: 100%;
+      width: 100%; }
+    .content #training {
+      height: 100vh; } }
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell; } }
