@@ -55,8 +55,8 @@ set :scm,             :git
 #     set :current_release, latest_release
 # end
 
-set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)})"
-
+set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn -Dc #{fetch(:unicorn_conf)})"
+# set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn -c #{current_path}/config/unicorn.rb -D -E #{fetch(:rack_env)};
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
