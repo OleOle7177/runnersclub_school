@@ -128,7 +128,8 @@ html, body {
 @media only screen and (max-width: 767px) {
   #home {
     height: 100vh;
-    min-height: 500px; }
+    min-height: 500px;
+    padding-top: 56px; }
     #home video {
       display: none; }
     #home .placeholder.image {
@@ -161,10 +162,8 @@ html, body {
         max-height: 200px;
         width: 80%; }
 
-  .section {
-    padding-top: 56px; }
-    .section .placeholder.image {
-      margin-left: -10px; }
+  .section .placeholder.image {
+    margin-left: -10px; }
 
   #footer {
     position: absolute;

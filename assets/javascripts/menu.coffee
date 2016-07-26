@@ -18,9 +18,16 @@ $(document).ready ->
       event.preventDefault()
       # Store hash
       hash = @hash
+
+      # additional padding for small screens
+      if ($(document).width() < 992)
+        addPadding = 56
+      else
+        addPadding = 0
+
       # Using jQuery's animate() method to add smooth page scroll
       # The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate { scrollTop: $(hash).offset().top }, 800, ->
+      $('html, body').animate { scrollTop: $(hash).offset().top - addPadding }, 800, ->
         # Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash
 

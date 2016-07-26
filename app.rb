@@ -12,6 +12,7 @@ class App < Sinatra::Base
     set :assets, (Sprockets::Environment.new { |env|
       env.append_path(settings.root + '/assets/stylesheets')
       env.append_path(settings.root + '/assets/javascripts')
+      env.append_path(settings.root + '/assets/images')
 
       #compress in production
       # if ENV['RACK_ENV'] == 'production'

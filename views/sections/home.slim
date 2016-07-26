@@ -1,12 +1,12 @@
 #home.section
-  .placeholder.image data-large='images/back.jpg'
-    img.img-responsive.img-small src='images/back_sm.jpg'
+  .placeholder.image data-large='https://s3.eu-central-1.amazonaws.com/rcamp/images/back.jpg'
+    img.img-responsive.img-small src="#{image_path('back_sm.jpg')}"
     div style='padding-bottom: 100vh'
 
     ul#contacts-sm.list-unstyled
       .text-center
         li.logo
-          img.logo src='images/logo.svg'
+          img.logo src="#{image_path('logo.svg')}"
         li.phone 
           a href='tel:+7 983 324 82 16' +7 983 324 82 16
         li: a href='mailto:runnersclub@yandex.ru' runnersclub@yandex.ru 
@@ -19,7 +19,7 @@
             == icon_tag('fa fa-heart', 'white')
   
   .placeholder.video data-large='https://s3.eu-central-1.amazonaws.com/rcamp/videos/marathon.mp4'
-    img.img-responsive.img-small src='images/poster.jpg' alt='Marathon start' style="height: 1080px"
+    img.img-responsive.img-small src="#{image_path('poster.jpg')}" alt='Marathon start' style="height: 1080px"
     div style="padding-bottom: 1080px"
   
   / video autoplay='true' loop='true'

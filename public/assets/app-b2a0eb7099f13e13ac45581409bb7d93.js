@@ -35,14 +35,19 @@
       return $('.side-nav a[href="' + sectionName + '"]').parent('li').addClass('active');
     });
     $('ul.nav > li, a.navbar-brand').on('click', function(event) {
-      var hash;
+      var addPadding, hash;
       $('.navigation ul.nav').collapse('hide');
       this.hash = $(this).children('a').attr('href') || 'home';
       if (this.hash !== '') {
         event.preventDefault();
         hash = this.hash;
+        if ($(document).width() < 992) {
+          addPadding = 56;
+        } else {
+          addPadding = 0;
+        }
         $('html, body').animate({
-          scrollTop: $(hash).offset().top
+          scrollTop: $(hash).offset().top - addPadding
         }, 800, function() {
           window.location.hash = hash;
         });
