@@ -10,3 +10,7 @@ gem 'sass'
 gem 'pry'
 gem 'sprockets'
 gem 'yui-compressor'
+
+gem 'capistrano'
+gem 'unicorn'
+gem 'capistrano-bundler'
