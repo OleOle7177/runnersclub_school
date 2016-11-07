@@ -21,7 +21,7 @@ $(document).ready ->
       hash = @hash
 
       # additional padding for small screens
-      if ($(document).width() < 992)
+      if ($(document).width() < 768)
         addPadding = 56
         scroll = 0
       else

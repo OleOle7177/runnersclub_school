@@ -21,8 +21,8 @@ set :bundle_without,  [:development, :test]
 set :deployer,        'hosting_oleole7177'
 set :use_sudo,        false
 set :deploy_to,       "/home/hosting_oleole7177/projects/camp"
-set :unicorn_conf,    "/etc/unicorn/camp.oleole7177.rb"
-set :unicorn_pid,     "/var/run/unicorn/hosting_oleole7177/camp.oleole7177.pid"
+set :unicorn_conf,    "/etc/unicorn/runnersclub.oleole7177.rb"
+set :unicorn_pid,     "/var/run/unicorn/hosting_oleole7177/runnersclub.oleole7177.pid"
 set :rvm_ruby_version, '2.2.2'
 
 # set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
@@ -49,7 +49,7 @@ set :scm,             :git
 #     set :current_release, latest_release
 # end
 
-set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use 2.2.2 do bundle exec unicorn -Dc /etc/unicorn/camp.oleole7177.rb"
+set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use 2.2.2 do bundle exec unicorn -Dc /etc/unicorn/runnersclub.oleole7177.rb"
 # set :unicorn_start_cmd, "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn -c #{current_path}/config/unicorn.rb -D -E #{fetch(:rack_env)};
 # Default value for keep_releases is 5
 set :keep_releases, 5
